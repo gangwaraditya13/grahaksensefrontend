@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Obsidian & Gold Spec */
+    --color-bg: #FBF8F2;
+    --color-surface: #FFFFFF;
+    --color-surface-secondary: #F3EEE4;
+    --color-border: #E6DFD1;
+    --color-text: #1C1917;
+    --color-muted: #6B655A;
+    --color-gold: #A87A1F;
+    --color-gold-hover: #916918;
+    --color-gold-muted: rgba(168, 122, 31, 0.12);
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode - Obsidian & Gold Spec */
+    --color-bg: #0C0B0A;
+    --color-surface: #151412;
+    --color-surface-secondary: #1D1B18;
+    --color-border: #2A2724;
+    --color-text: #F3EFE7;
+    --color-muted: #9B958A;
+    --color-gold: #D6A64F;
+    --color-gold-hover: #E4B866;
+    --color-gold-muted: rgba(214, 166, 79, 0.15);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
